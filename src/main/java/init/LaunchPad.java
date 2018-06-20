@@ -20,6 +20,8 @@ public class LaunchPad {
 
         o.organization();
 
+        System.out.println(o);
+
         ((ClassPathXmlApplicationContext) ctx).close();
     }
 }
