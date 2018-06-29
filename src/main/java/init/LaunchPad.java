@@ -1,6 +1,7 @@
 package init;
 
 import objects.Ocean;
+import org.Organization;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
 
@@ -16,11 +17,11 @@ public class LaunchPad {
 
         //Must put bean on classpath aka resources folder
         ApplicationContext ctx = new ClassPathXmlApplicationContext("bean-cp.xml");
-        Ocean o = (Ocean) ctx.getBean("ocean");
+        Organization o = (Organization) ctx.getBean("ocean");
 
-        o.organization();
+        System.out.println("Company slogan: " + o.getSlogan());
 
-        System.out.println(o);
+        System.out.println(o.corporateService());
 
         ((ClassPathXmlApplicationContext) ctx).close();
     }

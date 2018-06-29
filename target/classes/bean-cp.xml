@@ -5,10 +5,14 @@
        xsi:schemaLocation = "http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-
-    <bean id="ocean" class="objects.Ocean">
+    <bean id="ocean" class="org.Organization">
         <constructor-arg index="0" value="Hellooo nurse"/>
         <constructor-arg index="1" value="32"/>
+        <property name="businessService" ref="cloudService"/>
+        <property name="slogan" value="Have fun, work hard just have a life"/>
     </bean>
+
+    <bean id="business" class="implementation.BusinessServiceImpl"/>
+    <bean id="cloudService" class="implementation.CloudImpl"/>
 
 </beans>
