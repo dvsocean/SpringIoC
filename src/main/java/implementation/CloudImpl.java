@@ -1,6 +1,6 @@
 package implementation;
 
-import interfaces.BusinessService;
+import service.BusinessService;
 
 import java.util.Random;
 

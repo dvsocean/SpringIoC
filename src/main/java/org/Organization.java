@@ -1,6 +1,6 @@
 package org;
 
-import interfaces.BusinessService;
+import service.BusinessService;
 
 public class Organization {
 
