@@ -5,24 +5,9 @@
        xsi:schemaLocation = "http://www.springframework.org/schema/beans
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
-    <bean id="ocean" class="org.Organization">
-        <constructor-arg index="0" value="Google"/>
-        <constructor-arg index="1" value="1996"/>
-        <property name="businessService" ref="business"/>
-        <property name="slogan" value="Have fun, work hard just have employee and sperm counts ok?"/>
-    </bean>
 
-    <bean id="business" class="implementation.BusinessServiceImpl"/>
-    <bean id="cloudService" class="implementation.CloudImpl"/>
-
-    <bean id="agency" class="implementation.AgencyRecruitmentServiceImpl"/>
-
-    <bean id="referral" class="implementation.RefferalRecruitmentServiceImpl"/>
-
-    <bean id="myhrdept" class="domain.HumanResourceDept">
-        <constructor-arg name="recruitmentService" ref="referral"/>
-        <constructor-arg name="organization" ref="ocean"/>
-        <property name="deptName" value="Human Resource Dept 200000"/>
+    <bean id="autobot" class="implementation.AutobotImpl">
+        <property name="name" value="Goitchenburg"/>
     </bean>
 
 </beans>
