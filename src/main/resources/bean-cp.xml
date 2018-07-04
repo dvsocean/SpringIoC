@@ -6,9 +6,10 @@
    http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
 
 
-    <bean id="autobot" class="implementation.AutobotImpl">
-        <property name="name" value="Goitchenburg"/>
-    </bean>
+    <bean id="optimus" 
+
+    <bean id="autobot" class="implementation.AutobotImpl"/>
+    <bean id="bumble" class="implementation.BumblebeeImpl"/>
 
 
 
