@@ -1,22 +1,24 @@
 package init;
 
 import implementation.OptimusImpl;
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 public class LaunchPad {
 
     public static void main(String[] args) {
-//        ApplicationContext ctx = new ClassPathXmlApplicationContext("bean-cp.xml");
-//
-//        AutobotImpl auto = (AutobotImpl) ctx.getBean("autobot");
-//
-//        System.out.println("autobot name thru bean is: " + auto.getAutobotName());
-//
-//        ((ClassPathXmlApplicationContext) ctx).close();
+        ApplicationContext ctx = new ClassPathXmlApplicationContext("bean-cp.xml");
 
-       OptimusImpl op = new OptimusImpl();
+        OptimusImpl op = (OptimusImpl) ctx.getBean("optimus");
 
-        System.out.println("--> " + op.whatIsBumblesName());
         System.out.println("--> " + op.whatIsAutosName());
+        System.out.println("--> " + op.whatIsBumblesName());
+
+
+
+        ((ClassPathXmlApplicationContext) ctx).close();
+
+
 
     }
 }

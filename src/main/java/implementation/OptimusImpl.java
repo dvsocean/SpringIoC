@@ -1,14 +1,21 @@
 package implementation;
 
-import org.springframework.beans.factory.annotation.Autowired;
 
 public class OptimusImpl {
 
-    @Autowired
-    AutobotImpl ab;
 
-    @Autowired
-    BumblebeeImpl bb;
+    public AutobotImpl ab;
+
+
+    public BumblebeeImpl bb;
+
+    public void setAb(AutobotImpl ab) {
+        this.ab = ab;
+    }
+
+    public void setBb(BumblebeeImpl bb) {
+        this.bb = bb;
+    }
 
     public String whatIsAutosName(){
         return ab.getAutobotName();
